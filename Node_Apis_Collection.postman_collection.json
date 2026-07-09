@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "be1d5387-1686-4724-8d69-19f196895269",
+    "name": "Node_Apis_Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55916916",
+    "_collection_link": "https://go.postman.co/collection/55916916-be1d5387-1686-4724-8d69-19f196895269?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"iqoo neo-10r\",\r\n  \"description\": \"A nice gaming mobile\",\r\n  \"shortDescription\": \"has high gpu & performance score\",\r\n  \"brand\": \"IQOO\",\r\n  \"category\": \"Electronics\",\r\n  \"price\": 30000,\r\n  \"discountPrice\": 30000,\r\n  \"currency\": \"INR\",\r\n  \"variants\": [\r\n    {\r\n      \"size\": \"M\",\r\n      \"color\": \"Black\",\r\n      \"stock\": 10,\r\n      \"price\": 30000\r\n    }\r\n  ],\r\n  \"tags\": [\"new\", \"featured\"],\r\n  \"status\": \"active\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3009/api/v1/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3009",
+          "path": [
+            "api",
+            "v1",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3009/api/v1/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3009",
+          "path": [
+            "api",
+            "v1",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read_by_id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3009/api/v1/products/6a4f3522e50266c13162608a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3009",
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "6a4f3522e50266c13162608a"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"oppo k-13 turbo\",\r\n  \"description\": \"new launch with cooling fan\",\r\n  \"price\": 28000,\r\n  \"brand\": \"OPPO\",\r\n  \"category\": \"Electronics\",\r\n  \"status\": \"active\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3009/api/v1/products/6a4f3522e50266c13162608a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3009",
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "6a4f3522e50266c13162608a"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
