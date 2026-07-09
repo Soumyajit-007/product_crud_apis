@@ -10,6 +10,9 @@ router.route('/')
 router.route('/:id')
   .get(productController.getProductById)
   .put(productController.updateProduct)
+  .delete(productController.hardDeleteProduct);
+
+router.route('/:id/soft-delete')
   .delete(productController.softDeleteProduct);
 
-module.exports = router; 
+module.exports = router;

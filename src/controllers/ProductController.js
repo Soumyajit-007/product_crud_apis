@@ -83,6 +83,21 @@ class ProductController {
       res.status(StatusCode.SERVER_ERROR).json({ success: false, error: error.message });
     }
   }
+
+  // 3.6 Hard Delete Product (Permanent removal)
+  async hardDeleteProduct(req, res) {
+    try {
+      const deletedProduct = await Product.findByIdAndDelete(req.params.id);
+
+      if (!deletedProduct) {
+        return res.status(StatusCode.NOT_FOUND).json({ success: false, message: 'Product not found' });
+      }
+
+      res.status(StatusCode.OK).json({ success: true, message: 'Product deleted permanently' });
+    } catch (error) {
+      res.status(StatusCode.SERVER_ERROR).json({ success: false, error: error.message });
+    }
+  }
 }
 
 
